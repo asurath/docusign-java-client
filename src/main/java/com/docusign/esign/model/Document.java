@@ -43,6 +43,9 @@ public class Document {
   @JsonProperty("fileFormatHint")
   private String fileFormatHint = null;
 
+  @JsonProperty("htmlDefinition")
+  private HtmlDefinition htmlDefinition = null;
+
   @JsonProperty("includeInDownload")
   private String includeInDownload = null;
 
@@ -267,6 +270,19 @@ public class Document {
   public Document includeInDownload(String includeInDownload) {
     this.includeInDownload = includeInDownload;
     return this;
+  }
+
+  /**
+   *
+   * @return fileFormatHint
+   **/
+  @ApiModelProperty(example = "null", value = "")
+  public HtmlDefinition getHtmlDefinition() {
+    return htmlDefinition;
+  }
+
+  public void setHtmlDefinition(HtmlDefinition htmlDefinition) {
+    this.htmlDefinition = htmlDefinition;
   }
 
    /**
