@@ -80,8 +80,8 @@ if(hasProperty('target') && target == 'android') {
     apply plugin: 'java'
     apply plugin: 'maven'
     
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
     
     install {
         repositories.mavenInstaller {
@@ -105,6 +105,9 @@ ext {
 }
 
 dependencies {
+    compile group: 'org.bouncycastle', name: 'bcprov-ext-jdk16', version: '1.46'
+    compile group: 'org.bouncycastle', name: 'bcprov-jdk16', version: '1.45'
+    compile group: 'com.auth0', name: 'java-jwt', version: '3.4.0'
     compile "io.swagger:swagger-annotations:$swagger_annotations_version"
     compile "com.sun.jersey:jersey-client:$jersey_version"
     compile "com.sun.jersey.contribs:jersey-multipart:$jersey_version"
